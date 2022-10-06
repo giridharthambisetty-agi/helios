@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20221006 01:40:24.327" rpa="false" schemaversion="3">
+<suite id="s1" name="Test" source="c:\Users\00005803\Desktop\Robot framework tutorials\test.robot">
+<test id="s1-t1" name="file upload" line="183">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://the-internet.herokuapp.com/upload</arg>
+<arg>${browser}</arg>
+<arg>options=add_experimental_option('excludeSwitches', ['enable-logging'])</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221006 01:40:24.743" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/upload'.</msg>
+<status status="PASS" starttime="20221006 01:40:24.743" endtime="20221006 01:40:41.390"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221006 01:40:44.397" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221006 01:40:41.390" endtime="20221006 01:40:44.398"/>
+</kw>
+<kw name="Retrr" library="axs">
+<var>${sxw}</var>
+<arg>selenium-screenshot-1.png</arg>
+<msg timestamp="20221006 01:40:44.398" level="INFO">${sxw} = c:\Users\00005803\Desktop\Robot framework tutorials/selenium-screenshot-1.png</msg>
+<status status="PASS" starttime="20221006 01:40:44.398" endtime="20221006 01:40:44.398"/>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>file-upload</arg>
+<arg>${sxw}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20221006 01:40:44.398" level="INFO">Sending c:\Users\00005803\Desktop\Robot framework tutorials\selenium-screenshot-1.png to browser.</msg>
+<status status="PASS" starttime="20221006 01:40:44.398" endtime="20221006 01:40:44.486"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221006 01:40:47.505" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221006 01:40:44.487" endtime="20221006 01:40:47.505"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>file-submit</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221006 01:40:47.505" level="INFO">Clicking element 'file-submit'.</msg>
+<status status="PASS" starttime="20221006 01:40:47.505" endtime="20221006 01:40:48.839"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221006 01:40:52.854" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20221006 01:40:48.844" endtime="20221006 01:40:52.854"/>
+</kw>
+<status status="PASS" starttime="20221006 01:40:24.743" endtime="20221006 01:40:52.858"/>
+</test>
+<status status="PASS" starttime="20221006 01:40:24.342" endtime="20221006 01:40:52.865"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
