@@ -1,0 +1,3173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Rebot 5.0.1 (Python 3.10.6 on win32)" generated="20221006 16:25:44.624" rpa="false" schemaversion="3">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="Test" source="C:\Users\00005803\Desktop\Robot framework tutorials\test.robot">
+<test id="s1-s1-t1" name="asc" line="157">
+<kw name="opn_brwsr" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${browser}</arg>
+<arg>options=add_experimental_option('excludeSwitches', ['enable-logging'])</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221006 16:25:16.515" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20221006 16:25:16.515" endtime="20221006 16:25:19.186"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221006 16:25:19.187" endtime="20221006 16:25:19.349"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:16.515" endtime="20221006 16:25:19.350"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://www.fleekitsolutions.com/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221006 16:25:19.350" level="INFO">Opening url 'https://www.fleekitsolutions.com/'</msg>
+<status status="PASS" starttime="20221006 16:25:19.350" endtime="20221006 16:25:26.360"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath://img[@class='normal']</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20221006 16:25:26.376" level="INFO">Current page contains element 'xpath://img[@class='normal']'.</msg>
+<status status="PASS" starttime="20221006 16:25:26.360" endtime="20221006 16:25:26.376"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221006 16:25:31.392" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20221006 16:25:26.377" endtime="20221006 16:25:31.392"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${a}</var>
+<arg>xpath://*[@id="nav-menu-item-16934"]/a/span[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:31.430" level="INFO">${a} = ABOUT</msg>
+<status status="PASS" starttime="20221006 16:25:31.392" endtime="20221006 16:25:31.430"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${a}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:31.430" endtime="20221006 16:25:31.431"/>
+</kw>
+<kw name="close_brwsr" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20221006 16:25:31.432" endtime="20221006 16:25:33.591"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:31.432" endtime="20221006 16:25:33.591"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:16.514" endtime="20221006 16:25:33.591"/>
+</test>
+<test id="s1-s1-t2" name="bsc" line="163">
+<kw name="opn_brwsr" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${browser}</arg>
+<arg>options=add_experimental_option('excludeSwitches', ['enable-logging'])</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221006 16:25:33.591" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20221006 16:25:33.591" endtime="20221006 16:25:34.940"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221006 16:25:34.940" endtime="20221006 16:25:35.069"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:33.591" endtime="20221006 16:25:35.069"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://techedtrainings.com/courses</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221006 16:25:35.069" level="INFO">Opening url 'https://techedtrainings.com/courses'</msg>
+<status status="PASS" starttime="20221006 16:25:35.069" endtime="20221006 16:25:39.819"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${a}</var>
+<arg>xpath://a</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20221006 16:25:39.837" level="INFO">${a} = 156</msg>
+<status status="PASS" starttime="20221006 16:25:39.820" endtime="20221006 16:25:39.837"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${a}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:39.837" endtime="20221006 16:25:39.838"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${all_Links}</var>
+<arg>xpath://a</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20221006 16:25:39.849" level="INFO">${all_Links} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="0252b58a-a65f-4f3a-8bfa-e0297e7bc9ff")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20221006 16:25:39.838" endtime="20221006 16:25:39.849"/>
+</kw>
+<for flavor="IN">
+<var>${i}</var>
+<value>@{all_Links}</value>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="0252b58a-a65f-4f3a-8bfa-e0297e7bc9ff")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:39.864" level="INFO">${x} = </msg>
+<status status="PASS" starttime="20221006 16:25:39.850" endtime="20221006 16:25:39.864"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:39.864" endtime="20221006 16:25:39.865"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:39.865" endtime="20221006 16:25:39.866"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:39.850" endtime="20221006 16:25:39.866"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="0baff134-c7ee-4bfa-bb73-1deade915f51")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:39.878" level="INFO">${x} = HOME</msg>
+<status status="PASS" starttime="20221006 16:25:39.866" endtime="20221006 16:25:39.878"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:39.879" endtime="20221006 16:25:39.879"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:39.879" endtime="20221006 16:25:39.880"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:39.866" endtime="20221006 16:25:39.880"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="ff1d4fd0-a1d9-44eb-84f6-742045acf47d")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:39.894" level="INFO">${x} = COURSES</msg>
+<status status="PASS" starttime="20221006 16:25:39.880" endtime="20221006 16:25:39.894"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:39.894" endtime="20221006 16:25:39.895"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:39.895" endtime="20221006 16:25:39.895"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:39.880" endtime="20221006 16:25:39.895"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="34d20838-a4c5-44e6-9535-dfe3e5fdf050")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:39.908" level="INFO">${x} = CORPORATE TRAINING</msg>
+<status status="PASS" starttime="20221006 16:25:39.896" endtime="20221006 16:25:39.908"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:39.908" endtime="20221006 16:25:39.909"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:39.909" endtime="20221006 16:25:39.910"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:39.895" endtime="20221006 16:25:39.910"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="a7a73e05-4988-4271-a10d-533c89bae8b9")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:39.922" level="INFO">${x} = </msg>
+<status status="PASS" starttime="20221006 16:25:39.910" endtime="20221006 16:25:39.922"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:39.922" endtime="20221006 16:25:39.923"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:39.923" endtime="20221006 16:25:39.924"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:39.910" endtime="20221006 16:25:39.924"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="cc61edfa-ac17-499b-bff0-669eadcfa2ae")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:39.932" level="INFO">${x} = </msg>
+<status status="PASS" starttime="20221006 16:25:39.924" endtime="20221006 16:25:39.932"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:39.932" endtime="20221006 16:25:39.933"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:39.933" endtime="20221006 16:25:39.934"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:39.924" endtime="20221006 16:25:39.934"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="b3cac37d-c96e-49d3-a98d-5c87822d944e")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:39.938" level="INFO">${x} = </msg>
+<status status="PASS" starttime="20221006 16:25:39.934" endtime="20221006 16:25:39.938"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:39.938" endtime="20221006 16:25:39.938"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:39.938" endtime="20221006 16:25:39.938"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:39.934" endtime="20221006 16:25:39.938"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="d7ff9f90-e4f9-480f-a5c2-b12d2ea3b965")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:39.938" level="INFO">${x} = </msg>
+<status status="PASS" starttime="20221006 16:25:39.938" endtime="20221006 16:25:39.938"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:39.938" endtime="20221006 16:25:39.938"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:39.938" endtime="20221006 16:25:39.938"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:39.938" endtime="20221006 16:25:39.938"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="7d2f58c7-38b0-4bd7-a6ab-980f4123fa18")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:39.954" level="INFO">${x} = </msg>
+<status status="PASS" starttime="20221006 16:25:39.954" endtime="20221006 16:25:39.954"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:39.954" endtime="20221006 16:25:39.954"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:39.954" endtime="20221006 16:25:39.954"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:39.938" endtime="20221006 16:25:39.954"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="0af54167-591d-45d6-8801-a787651092bb")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:39.969" level="INFO">${x} = </msg>
+<status status="PASS" starttime="20221006 16:25:39.954" endtime="20221006 16:25:39.969"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:39.969" endtime="20221006 16:25:39.969"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:39.969" endtime="20221006 16:25:39.969"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:39.954" endtime="20221006 16:25:39.969"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="f441a3da-6e39-43a7-b13b-f490f7c78ada")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:39.985" level="INFO">${x} = ABOUT</msg>
+<status status="PASS" starttime="20221006 16:25:39.985" endtime="20221006 16:25:39.985"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:39.985" endtime="20221006 16:25:39.985"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:39.985" endtime="20221006 16:25:39.985"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:39.985" endtime="20221006 16:25:39.985"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="dceecb55-1db4-4a0b-b195-6e8fcb6cf97e")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.015" level="INFO">${x} = CONTACT</msg>
+<status status="PASS" starttime="20221006 16:25:40.001" endtime="20221006 16:25:40.015"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.015" endtime="20221006 16:25:40.016"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.016" endtime="20221006 16:25:40.018"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:39.985" endtime="20221006 16:25:40.019"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="29470f73-cae2-4f82-a211-dba8c53a49cc")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.030" level="INFO">${x} = </msg>
+<status status="PASS" starttime="20221006 16:25:40.019" endtime="20221006 16:25:40.030"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.030" endtime="20221006 16:25:40.031"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.031" endtime="20221006 16:25:40.031"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.019" endtime="20221006 16:25:40.032"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="5cbcaed3-94ca-4836-975d-6fcff2b3acb9")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.044" level="INFO">${x} = Essential Java</msg>
+<status status="PASS" starttime="20221006 16:25:40.032" endtime="20221006 16:25:40.044"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.045" endtime="20221006 16:25:40.045"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.046" endtime="20221006 16:25:40.046"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.032" endtime="20221006 16:25:40.047"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="b67d44d2-4d20-4ca1-a48b-6aa3474e1c78")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.060" level="INFO">${x} = Developing Applications with Java 8</msg>
+<status status="PASS" starttime="20221006 16:25:40.048" endtime="20221006 16:25:40.060"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.061" endtime="20221006 16:25:40.062"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.062" endtime="20221006 16:25:40.064"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.047" endtime="20221006 16:25:40.065"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="d1a4cb2a-cc16-46ff-8c95-7f50a2b469a3")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.082" level="INFO">${x} = JEE Test-Driven Development</msg>
+<status status="PASS" starttime="20221006 16:25:40.065" endtime="20221006 16:25:40.082"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.082" endtime="20221006 16:25:40.082"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.082" endtime="20221006 16:25:40.084"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.065" endtime="20221006 16:25:40.084"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="88aec18e-2465-482e-969d-d1e87262d425")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.095" level="INFO">${x} = Mastering Test-Driven Development Using JUnit</msg>
+<status status="PASS" starttime="20221006 16:25:40.084" endtime="20221006 16:25:40.095"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.095" endtime="20221006 16:25:40.098"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.098" endtime="20221006 16:25:40.098"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.084" endtime="20221006 16:25:40.098"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="e9c2385f-22a0-483a-818a-59405e162174")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.102" level="INFO">${x} = Java 9 New Features</msg>
+<status status="PASS" starttime="20221006 16:25:40.098" endtime="20221006 16:25:40.102"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.115" endtime="20221006 16:25:40.115"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.115" endtime="20221006 16:25:40.117"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.098" endtime="20221006 16:25:40.117"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="341007ca-e930-4376-9ac6-e670b9cca2c7")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.125" level="INFO">${x} = Advanced Java</msg>
+<status status="PASS" starttime="20221006 16:25:40.118" endtime="20221006 16:25:40.125"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.125" endtime="20221006 16:25:40.125"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.125" endtime="20221006 16:25:40.125"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.118" endtime="20221006 16:25:40.125"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="6872b9df-e3cf-4f43-952b-4b0138e48a50")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.141" level="INFO">${x} = JSP &amp; Servlets</msg>
+<status status="PASS" starttime="20221006 16:25:40.125" endtime="20221006 16:25:40.141"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.141" endtime="20221006 16:25:40.141"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.141" endtime="20221006 16:25:40.141"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.125" endtime="20221006 16:25:40.141"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="4e931297-78e3-4a48-a42b-27dfdfe3ebe7")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.157" level="INFO">${x} = Java Best Practices and Design Patterns</msg>
+<status status="PASS" starttime="20221006 16:25:40.141" endtime="20221006 16:25:40.157"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.157" endtime="20221006 16:25:40.157"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.157" endtime="20221006 16:25:40.157"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.141" endtime="20221006 16:25:40.157"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="520a2e59-e22e-4d1b-ab59-d3be25d9a57c")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.181" level="INFO">${x} = Implementing SOA with XML Web Services in Java</msg>
+<status status="PASS" starttime="20221006 16:25:40.157" endtime="20221006 16:25:40.181"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.181" endtime="20221006 16:25:40.182"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.182" endtime="20221006 16:25:40.182"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.157" endtime="20221006 16:25:40.182"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="339569df-9217-4917-aa3c-2bf500df927b")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.194" level="INFO">${x} = Mastering the Spring Framework and Hibernate</msg>
+<status status="PASS" starttime="20221006 16:25:40.182" endtime="20221006 16:25:40.194"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.194" endtime="20221006 16:25:40.195"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.195" endtime="20221006 16:25:40.195"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.182" endtime="20221006 16:25:40.195"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="864b9709-2da7-4b8b-98f5-40856e121180")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.210" level="INFO">${x} = Deepdive in to SpringBoot &amp; Spring Data</msg>
+<status status="PASS" starttime="20221006 16:25:40.195" endtime="20221006 16:25:40.210"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.210" endtime="20221006 16:25:40.210"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.210" endtime="20221006 16:25:40.210"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.195" endtime="20221006 16:25:40.210"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="2b200c69-cfa4-4f9c-80e8-9af720c5d2d5")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.224" level="INFO">${x} = Spring Security</msg>
+<status status="PASS" starttime="20221006 16:25:40.210" endtime="20221006 16:25:40.224"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.225" endtime="20221006 16:25:40.225"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.226" endtime="20221006 16:25:40.226"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.210" endtime="20221006 16:25:40.226"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="19e3f031-0df5-482f-a781-4393d385cb29")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.242" level="INFO">${x} = MicroServices using Spring Cloud</msg>
+<status status="PASS" starttime="20221006 16:25:40.227" endtime="20221006 16:25:40.242"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.242" endtime="20221006 16:25:40.243"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.243" endtime="20221006 16:25:40.243"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.227" endtime="20221006 16:25:40.243"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="e67ea576-4aec-4e4c-9953-0a22cafa970b")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.254" level="INFO">${x} = Quarkus &amp; MicroProfile</msg>
+<status status="PASS" starttime="20221006 16:25:40.243" endtime="20221006 16:25:40.254"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.254" endtime="20221006 16:25:40.254"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.254" endtime="20221006 16:25:40.255"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.243" endtime="20221006 16:25:40.255"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="1f26e041-8789-4d5b-9f74-bc074b7bd715")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.264" level="INFO">${x} = Big Data Essentials for Managers &amp; Non-Programmers</msg>
+<status status="PASS" starttime="20221006 16:25:40.255" endtime="20221006 16:25:40.264"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.264" endtime="20221006 16:25:40.265"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.265" endtime="20221006 16:25:40.265"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.255" endtime="20221006 16:25:40.265"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="66ef150d-ba32-4855-a92a-6f7cf32788d9")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.278" level="INFO">${x} = Analysing Big Data Using Hadoop, Hive, Spark, and HBase</msg>
+<status status="PASS" starttime="20221006 16:25:40.265" endtime="20221006 16:25:40.278"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.278" endtime="20221006 16:25:40.280"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.281" endtime="20221006 16:25:40.281"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.265" endtime="20221006 16:25:40.281"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="4e93af37-cbc6-49d1-8f60-5c9f778b5c17")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.295" level="INFO">${x} = Hadoop for MapReduce Applications</msg>
+<status status="PASS" starttime="20221006 16:25:40.282" endtime="20221006 16:25:40.295"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.295" endtime="20221006 16:25:40.296"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.297" endtime="20221006 16:25:40.297"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.281" endtime="20221006 16:25:40.298"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="e7776525-fc10-4075-bf92-d3131011a102")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.311" level="INFO">${x} = Creating Distributed Applications Using Pig and Hive on Hadoop</msg>
+<status status="PASS" starttime="20221006 16:25:40.298" endtime="20221006 16:25:40.311"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.311" endtime="20221006 16:25:40.312"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.312" endtime="20221006 16:25:40.313"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.298" endtime="20221006 16:25:40.313"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="fb163ea3-808b-4f5b-b829-9e5af6cb7ad0")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.327" level="INFO">${x} = Introduction to NoSQL Databases</msg>
+<status status="PASS" starttime="20221006 16:25:40.315" endtime="20221006 16:25:40.327"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.327" endtime="20221006 16:25:40.328"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.328" endtime="20221006 16:25:40.328"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.314" endtime="20221006 16:25:40.329"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="c2a7108a-ef08-4955-b984-6e61d4ba1408")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.342" level="INFO">${x} = Spark for Big Data Processing</msg>
+<status status="PASS" starttime="20221006 16:25:40.330" endtime="20221006 16:25:40.342"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.342" endtime="20221006 16:25:40.342"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.343" endtime="20221006 16:25:40.343"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.329" endtime="20221006 16:25:40.343"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="770a3e9c-75eb-4c51-a526-e2809d7dc933")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.358" level="INFO">${x} = Learning Apache Kafka</msg>
+<status status="PASS" starttime="20221006 16:25:40.344" endtime="20221006 16:25:40.358"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.359" endtime="20221006 16:25:40.360"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.360" endtime="20221006 16:25:40.361"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.344" endtime="20221006 16:25:40.361"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="182b5114-7e25-4202-bbae-ec6c5dcf1336")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.376" level="INFO">${x} = Scala Programming Foundations</msg>
+<status status="PASS" starttime="20221006 16:25:40.362" endtime="20221006 16:25:40.376"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.377" endtime="20221006 16:25:40.377"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.378" endtime="20221006 16:25:40.378"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.361" endtime="20221006 16:25:40.379"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="dc3fdb58-d28f-46c9-8b15-001b46306f09")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.391" level="INFO">${x} = Apache Storm Fundamentals</msg>
+<status status="PASS" starttime="20221006 16:25:40.379" endtime="20221006 16:25:40.391"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.391" endtime="20221006 16:25:40.393"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.393" endtime="20221006 16:25:40.394"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.379" endtime="20221006 16:25:40.394"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="86909369-3469-4282-b841-1661d253761a")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.433" level="INFO">${x} = Comprehensive Pig</msg>
+<status status="PASS" starttime="20221006 16:25:40.394" endtime="20221006 16:25:40.433"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.433" endtime="20221006 16:25:40.435"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.435" endtime="20221006 16:25:40.436"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.394" endtime="20221006 16:25:40.436"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="c7caf5f4-8706-42ea-bf11-ad509a6b9541")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.443" level="INFO">${x} = Comprehensive Hive</msg>
+<status status="PASS" starttime="20221006 16:25:40.436" endtime="20221006 16:25:40.443"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.443" endtime="20221006 16:25:40.443"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.443" endtime="20221006 16:25:40.443"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.436" endtime="20221006 16:25:40.443"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="fca3e15d-4e56-4720-98fb-d57cec90c07f")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.459" level="INFO">${x} = Python Tools for Data Analysis and Visualization</msg>
+<status status="PASS" starttime="20221006 16:25:40.443" endtime="20221006 16:25:40.459"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.459" endtime="20221006 16:25:40.459"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.459" endtime="20221006 16:25:40.459"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.443" endtime="20221006 16:25:40.459"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="fb234461-a160-40fc-b43a-d79c0ba19265")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.470" level="INFO">${x} = Data Visualization with Tableau</msg>
+<status status="PASS" starttime="20221006 16:25:40.459" endtime="20221006 16:25:40.470"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.470" endtime="20221006 16:25:40.470"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.470" endtime="20221006 16:25:40.470"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.459" endtime="20221006 16:25:40.470"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="acedefc6-ade5-4828-949e-7c0cc0788923")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.486" level="INFO">${x} = TIBCO Spotfire</msg>
+<status status="PASS" starttime="20221006 16:25:40.470" endtime="20221006 16:25:40.486"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.486" endtime="20221006 16:25:40.486"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.486" endtime="20221006 16:25:40.486"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.470" endtime="20221006 16:25:40.486"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="8ba5cc57-0b69-48e0-9486-dfdba939fe26")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.502" level="INFO">${x} = Data Visualization with Qlikview</msg>
+<status status="PASS" starttime="20221006 16:25:40.486" endtime="20221006 16:25:40.502"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.502" endtime="20221006 16:25:40.502"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.502" endtime="20221006 16:25:40.502"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.486" endtime="20221006 16:25:40.502"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="560b475a-d483-44ac-a168-fb54a4c6be81")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.524" level="INFO">${x} = Data Science with Python</msg>
+<status status="PASS" starttime="20221006 16:25:40.502" endtime="20221006 16:25:40.524"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.524" endtime="20221006 16:25:40.527"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.527" endtime="20221006 16:25:40.528"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.502" endtime="20221006 16:25:40.528"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="3244fb00-0b97-4a7c-b4b1-0b6cc376442f")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.542" level="INFO">${x} = Machine Learning with Python</msg>
+<status status="PASS" starttime="20221006 16:25:40.529" endtime="20221006 16:25:40.542"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.542" endtime="20221006 16:25:40.542"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.543" endtime="20221006 16:25:40.543"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.528" endtime="20221006 16:25:40.543"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="e316b512-7921-4f12-b371-86b1718f4163")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.557" level="INFO">${x} = Data Science Using R</msg>
+<status status="PASS" starttime="20221006 16:25:40.543" endtime="20221006 16:25:40.557"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.557" endtime="20221006 16:25:40.557"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.557" endtime="20221006 16:25:40.557"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.543" endtime="20221006 16:25:40.557"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="b0fea799-1563-492f-a47e-15b8db0866ee")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.557" level="INFO">${x} = Machine Learning using R</msg>
+<status status="PASS" starttime="20221006 16:25:40.557" endtime="20221006 16:25:40.570"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.570" endtime="20221006 16:25:40.570"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.570" endtime="20221006 16:25:40.570"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.557" endtime="20221006 16:25:40.570"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="cdfd2ee0-5b09-47ae-aa86-faffaa133959")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.570" level="INFO">${x} = Foundations of Data Scraping</msg>
+<status status="PASS" starttime="20221006 16:25:40.570" endtime="20221006 16:25:40.570"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.570" endtime="20221006 16:25:40.570"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.570" endtime="20221006 16:25:40.570"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.570" endtime="20221006 16:25:40.570"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="a65beea5-573a-4d33-acd2-ecb347b15fb7")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.597" level="INFO">${x} = Machine Learning with Pig</msg>
+<status status="PASS" starttime="20221006 16:25:40.570" endtime="20221006 16:25:40.597"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.597" endtime="20221006 16:25:40.599"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.599" endtime="20221006 16:25:40.599"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.570" endtime="20221006 16:25:40.599"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="ab787fc4-f879-4188-85bf-06b009de401f")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.611" level="INFO">${x} = Introduction to Machine Learning</msg>
+<status status="PASS" starttime="20221006 16:25:40.599" endtime="20221006 16:25:40.611"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.611" endtime="20221006 16:25:40.611"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.611" endtime="20221006 16:25:40.613"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.599" endtime="20221006 16:25:40.613"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="614b3ce8-e812-4a0d-be27-03c99339d6c8")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.625" level="INFO">${x} = Introduction to Neural Networks and Deep Learning</msg>
+<status status="PASS" starttime="20221006 16:25:40.613" endtime="20221006 16:25:40.625"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.625" endtime="20221006 16:25:40.627"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.627" endtime="20221006 16:25:40.628"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.613" endtime="20221006 16:25:40.628"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="2b5369fb-7bce-419c-9558-a50526397306")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.630" level="INFO">${x} = Machine Learning Concepts</msg>
+<status status="PASS" starttime="20221006 16:25:40.629" endtime="20221006 16:25:40.630"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.630" endtime="20221006 16:25:40.630"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.630" endtime="20221006 16:25:40.630"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.628" endtime="20221006 16:25:40.630"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="fc21fc3d-27d9-4e17-91bc-4926578dd1d1")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.646" level="INFO">${x} = Introduction to Linux</msg>
+<status status="PASS" starttime="20221006 16:25:40.630" endtime="20221006 16:25:40.646"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.646" endtime="20221006 16:25:40.646"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.646" endtime="20221006 16:25:40.646"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.630" endtime="20221006 16:25:40.646"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="ffb3a4de-1cb6-4ce1-b397-21959b00825d")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.674" level="INFO">${x} = Linux Workstation: Installing, Customizing, and Securing</msg>
+<status status="PASS" starttime="20221006 16:25:40.646" endtime="20221006 16:25:40.674"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.674" endtime="20221006 16:25:40.675"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.675" endtime="20221006 16:25:40.676"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.646" endtime="20221006 16:25:40.676"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="e431bd29-d790-4c75-a6eb-2de9d69682d2")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.689" level="INFO">${x} = Linux Network Server: Installing, Setup, and Securing</msg>
+<status status="PASS" starttime="20221006 16:25:40.677" endtime="20221006 16:25:40.689"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.689" endtime="20221006 16:25:40.690"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.690" endtime="20221006 16:25:40.691"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.676" endtime="20221006 16:25:40.691"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="91793d62-4012-4a9f-8f58-5037a6f27595")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.698" level="INFO">${x} = Red Hat Linux Boot Camp</msg>
+<status status="PASS" starttime="20221006 16:25:40.692" endtime="20221006 16:25:40.698"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.698" endtime="20221006 16:25:40.698"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.698" endtime="20221006 16:25:40.698"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.691" endtime="20221006 16:25:40.698"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="33f0ec82-4cb8-4d84-a372-bbeb679f16ef")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.716" level="INFO">${x} = Introduction to UNIX</msg>
+<status status="PASS" starttime="20221006 16:25:40.698" endtime="20221006 16:25:40.716"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.716" endtime="20221006 16:25:40.716"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.716" endtime="20221006 16:25:40.716"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.698" endtime="20221006 16:25:40.716"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="1d5b44d6-69ba-40db-91dc-4819689a8359")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.730" level="INFO">${x} = Mastering UNIX</msg>
+<status status="PASS" starttime="20221006 16:25:40.716" endtime="20221006 16:25:40.730"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.730" endtime="20221006 16:25:40.730"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.731" endtime="20221006 16:25:40.732"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.716" endtime="20221006 16:25:40.732"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="bffd4f5e-ffe2-4983-a089-26c8407a2cbd")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.747" level="INFO">${x} = Scripting/ Programming Languages</msg>
+<status status="PASS" starttime="20221006 16:25:40.733" endtime="20221006 16:25:40.747"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.747" endtime="20221006 16:25:40.748"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.748" endtime="20221006 16:25:40.749"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.733" endtime="20221006 16:25:40.749"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="f109c5fd-b86f-49e8-b023-c6148b15950a")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.765" level="INFO">${x} = Python Programming Essentials</msg>
+<status status="PASS" starttime="20221006 16:25:40.749" endtime="20221006 16:25:40.765"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.765" endtime="20221006 16:25:40.766"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.766" endtime="20221006 16:25:40.766"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.749" endtime="20221006 16:25:40.766"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="9d2c1d36-99f9-42c7-ac11-49e9b43c9bfe")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.774" level="INFO">${x} = Advanced Python Programming</msg>
+<status status="PASS" starttime="20221006 16:25:40.766" endtime="20221006 16:25:40.774"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.774" endtime="20221006 16:25:40.774"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.774" endtime="20221006 16:25:40.774"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.766" endtime="20221006 16:25:40.774"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="43d12c87-eae9-4e77-ae47-0a598eba3ea5")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.797" level="INFO">${x} = Shell Programming</msg>
+<status status="PASS" starttime="20221006 16:25:40.774" endtime="20221006 16:25:40.797"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.797" endtime="20221006 16:25:40.798"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.798" endtime="20221006 16:25:40.798"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.774" endtime="20221006 16:25:40.799"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="f179cd05-453c-4be7-bea3-d50029705b12")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.810" level="INFO">${x} = PowerShell for Managing Windows Servers and Workstations</msg>
+<status status="PASS" starttime="20221006 16:25:40.799" endtime="20221006 16:25:40.812"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.812" endtime="20221006 16:25:40.813"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.813" endtime="20221006 16:25:40.814"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.799" endtime="20221006 16:25:40.814"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="09de4293-5ce5-4e54-bad3-e05beb6cdf56")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.827" level="INFO">${x} = Ruby Deepdive</msg>
+<status status="PASS" starttime="20221006 16:25:40.814" endtime="20221006 16:25:40.827"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.827" endtime="20221006 16:25:40.828"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.828" endtime="20221006 16:25:40.829"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.814" endtime="20221006 16:25:40.829"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="9542606d-480d-43d9-b415-acb9488994e8")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.834" level="INFO">${x} = Kotlin Fundamentals</msg>
+<status status="PASS" starttime="20221006 16:25:40.830" endtime="20221006 16:25:40.834"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.834" endtime="20221006 16:25:40.834"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.834" endtime="20221006 16:25:40.834"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.829" endtime="20221006 16:25:40.834"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="de6f1d63-6eb5-49fe-8ce5-455db3934912")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.850" level="INFO">${x} = C#</msg>
+<status status="PASS" starttime="20221006 16:25:40.834" endtime="20221006 16:25:40.850"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.850" endtime="20221006 16:25:40.850"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.850" endtime="20221006 16:25:40.850"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.834" endtime="20221006 16:25:40.850"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="3c0fd2aa-943f-4049-be60-2c561edd4471")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.871" level="INFO">${x} = Oracle Database &amp; PL/SQL</msg>
+<status status="PASS" starttime="20221006 16:25:40.850" endtime="20221006 16:25:40.871"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.871" endtime="20221006 16:25:40.871"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.871" endtime="20221006 16:25:40.871"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.850" endtime="20221006 16:25:40.871"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="1f84e47e-0d9c-472f-b7ea-c1fda82baecc")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.889" level="INFO">${x} = MySQL Fundamentals</msg>
+<status status="PASS" starttime="20221006 16:25:40.871" endtime="20221006 16:25:40.889"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.889" endtime="20221006 16:25:40.889"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.889" endtime="20221006 16:25:40.889"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.871" endtime="20221006 16:25:40.889"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="38c9bec9-e045-45f3-82de-126d1ae9719d")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.905" level="INFO">${x} = PostgreSQL Fundamentals</msg>
+<status status="PASS" starttime="20221006 16:25:40.889" endtime="20221006 16:25:40.905"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.905" endtime="20221006 16:25:40.906"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.906" endtime="20221006 16:25:40.906"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.889" endtime="20221006 16:25:40.906"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="7646eb08-85f8-4f74-8e80-ab457e124f10")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.909" level="INFO">${x} = Microsoft SQL</msg>
+<status status="PASS" starttime="20221006 16:25:40.906" endtime="20221006 16:25:40.909"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.909" endtime="20221006 16:25:40.909"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.909" endtime="20221006 16:25:40.909"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.906" endtime="20221006 16:25:40.909"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="8a5fb3f4-e08f-4b4e-b20e-cca9d04d8f36")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.935" level="INFO">${x} = Hbase</msg>
+<status status="PASS" starttime="20221006 16:25:40.909" endtime="20221006 16:25:40.935"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.936" endtime="20221006 16:25:40.936"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.936" endtime="20221006 16:25:40.937"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.909" endtime="20221006 16:25:40.937"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="93cae43e-36aa-4c5b-ba0c-482db7b51449")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.951" level="INFO">${x} = MariaDB for Developers</msg>
+<status status="PASS" starttime="20221006 16:25:40.937" endtime="20221006 16:25:40.951"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.951" endtime="20221006 16:25:40.952"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.952" endtime="20221006 16:25:40.952"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.937" endtime="20221006 16:25:40.953"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="0a535f6f-5ab9-4784-a222-f88efe516720")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.964" level="INFO">${x} = Master Neo4j Graph Database</msg>
+<status status="PASS" starttime="20221006 16:25:40.953" endtime="20221006 16:25:40.964"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.964" endtime="20221006 16:25:40.965"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.966" endtime="20221006 16:25:40.967"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.953" endtime="20221006 16:25:40.967"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="857ae544-b7a3-495b-a3a8-1f17aff6434d")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:40.983" level="INFO">${x} = Cassandra</msg>
+<status status="PASS" starttime="20221006 16:25:40.968" endtime="20221006 16:25:40.983"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:40.983" endtime="20221006 16:25:40.984"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:40.984" endtime="20221006 16:25:40.985"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.967" endtime="20221006 16:25:40.986"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="ed59d4aa-2da5-4a41-8001-200a055036c5")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.005" level="INFO">${x} = MongoDB for Developers</msg>
+<status status="PASS" starttime="20221006 16:25:40.987" endtime="20221006 16:25:41.005"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.006" endtime="20221006 16:25:41.006"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.006" endtime="20221006 16:25:41.006"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:40.986" endtime="20221006 16:25:41.006"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="e14723d5-d719-4353-8fa2-237d2fe3d4b2")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.028" level="INFO">${x} = MongoDB for Administrators</msg>
+<status status="PASS" starttime="20221006 16:25:41.006" endtime="20221006 16:25:41.028"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.029" endtime="20221006 16:25:41.030"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.030" endtime="20221006 16:25:41.030"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.006" endtime="20221006 16:25:41.030"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="6f44ed55-0ca4-443a-8c2d-77660213da9f")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.048" level="INFO">${x} = ASP.NET Core 5</msg>
+<status status="PASS" starttime="20221006 16:25:41.030" endtime="20221006 16:25:41.048"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.048" endtime="20221006 16:25:41.048"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.048" endtime="20221006 16:25:41.049"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.030" endtime="20221006 16:25:41.049"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="b618365d-e44a-4527-bfa1-f00b29f90442")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.060" level="INFO">${x} = ASP.NET Core Development</msg>
+<status status="PASS" starttime="20221006 16:25:41.049" endtime="20221006 16:25:41.060"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.060" endtime="20221006 16:25:41.062"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.062" endtime="20221006 16:25:41.063"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.049" endtime="20221006 16:25:41.063"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="19bca6a0-3238-4116-89d2-d5c80cc420bf")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.078" level="INFO">${x} = Microservices Using .NET Core</msg>
+<status status="PASS" starttime="20221006 16:25:41.065" endtime="20221006 16:25:41.078"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.078" endtime="20221006 16:25:41.079"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.079" endtime="20221006 16:25:41.079"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.063" endtime="20221006 16:25:41.079"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="8a9dcf36-0186-41aa-a474-9df1a9c8d610")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.090" level="INFO">${x} = Building Web Applications with ASP MVC</msg>
+<status status="PASS" starttime="20221006 16:25:41.079" endtime="20221006 16:25:41.090"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.090" endtime="20221006 16:25:41.092"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.092" endtime="20221006 16:25:41.092"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.079" endtime="20221006 16:25:41.092"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="37bcf355-26ea-41d0-95bd-3e17aa013c6e")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.106" level="INFO">${x} = RESTful.NET</msg>
+<status status="PASS" starttime="20221006 16:25:41.094" endtime="20221006 16:25:41.106"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.106" endtime="20221006 16:25:41.107"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.107" endtime="20221006 16:25:41.107"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.092" endtime="20221006 16:25:41.107"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="a588e8e7-a5a0-4125-9fb1-9104146c94a3")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.119" level="INFO">${x} = .NET Core Development</msg>
+<status status="PASS" starttime="20221006 16:25:41.107" endtime="20221006 16:25:41.119"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.120" endtime="20221006 16:25:41.120"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.121" endtime="20221006 16:25:41.121"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.107" endtime="20221006 16:25:41.121"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="fedfa75a-5314-4c58-beb5-981af405ea79")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.133" level="INFO">${x} = .NET Fundamentals</msg>
+<status status="PASS" starttime="20221006 16:25:41.122" endtime="20221006 16:25:41.133"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.133" endtime="20221006 16:25:41.133"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.133" endtime="20221006 16:25:41.137"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.121" endtime="20221006 16:25:41.137"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="39f81244-693a-4df2-b001-9473faf72475")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.147" level="INFO">${x} = Web Development with HTML5 and CSS3</msg>
+<status status="PASS" starttime="20221006 16:25:41.137" endtime="20221006 16:25:41.147"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.147" endtime="20221006 16:25:41.148"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.148" endtime="20221006 16:25:41.149"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.137" endtime="20221006 16:25:41.149"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="ebf7d90c-55e4-436e-b730-2a7fc044c43a")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.162" level="INFO">${x} = Mastering JavaScript with ES6 &amp; ES7</msg>
+<status status="PASS" starttime="20221006 16:25:41.149" endtime="20221006 16:25:41.162"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.162" endtime="20221006 16:25:41.163"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.163" endtime="20221006 16:25:41.163"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.149" endtime="20221006 16:25:41.163"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="0e2440d3-f8f2-4aee-98ee-acc645d77e3f")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.179" level="INFO">${x} = jQuery Web Development</msg>
+<status status="PASS" starttime="20221006 16:25:41.163" endtime="20221006 16:25:41.179"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.179" endtime="20221006 16:25:41.180"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.180" endtime="20221006 16:25:41.181"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.163" endtime="20221006 16:25:41.181"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="2ae11a50-260e-4de2-8770-7c9658e7b8ab")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.185" level="INFO">${x} = Advanced jQuery Web Development</msg>
+<status status="PASS" starttime="20221006 16:25:41.181" endtime="20221006 16:25:41.185"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.185" endtime="20221006 16:25:41.185"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.185" endtime="20221006 16:25:41.185"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.181" endtime="20221006 16:25:41.185"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="513ffca2-fe0d-4f0e-83d6-0efe75abf559")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.201" level="INFO">${x} = Rich Internet Applications with Ajax, HTML5, and jQuery</msg>
+<status status="PASS" starttime="20221006 16:25:41.185" endtime="20221006 16:25:41.201"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.201" endtime="20221006 16:25:41.201"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.201" endtime="20221006 16:25:41.201"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.185" endtime="20221006 16:25:41.201"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="7f8a3d71-27f4-44cd-afaf-3b130a5919c4")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.231" level="INFO">${x} = Node.js/MEAN End-to-End Web Development</msg>
+<status status="PASS" starttime="20221006 16:25:41.201" endtime="20221006 16:25:41.231"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.231" endtime="20221006 16:25:41.231"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.231" endtime="20221006 16:25:41.231"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.201" endtime="20221006 16:25:41.231"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="17740528-c82d-451b-b86e-25202cf89153")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.252" level="INFO">${x} = ReactJS Fundamentals</msg>
+<status status="PASS" starttime="20221006 16:25:41.231" endtime="20221006 16:25:41.253"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.253" endtime="20221006 16:25:41.254"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.255" endtime="20221006 16:25:41.255"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.231" endtime="20221006 16:25:41.255"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="8626b175-dfc5-4395-ab0a-b7b2e2e9d1d0")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.273" level="INFO">${x} = Building Web Applications with React, Redux &amp; Saga</msg>
+<status status="PASS" starttime="20221006 16:25:41.257" endtime="20221006 16:25:41.273"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.274" endtime="20221006 16:25:41.274"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.274" endtime="20221006 16:25:41.274"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.255" endtime="20221006 16:25:41.274"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="19edc76f-cce7-4275-8185-81e1e92d3266")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.294" level="INFO">${x} = Angular SPA Development</msg>
+<status status="PASS" starttime="20221006 16:25:41.278" endtime="20221006 16:25:41.294"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.294" endtime="20221006 16:25:41.295"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.295" endtime="20221006 16:25:41.295"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.274" endtime="20221006 16:25:41.295"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="6a3bd515-f8f2-4552-b56f-3f0acbb5102a")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.308" level="INFO">${x} = Web and Mobile Application Security</msg>
+<status status="PASS" starttime="20221006 16:25:41.296" endtime="20221006 16:25:41.308"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.308" endtime="20221006 16:25:41.309"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.309" endtime="20221006 16:25:41.310"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.296" endtime="20221006 16:25:41.310"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="a2e67775-21c8-4d56-b28c-6997b6a5c561")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.326" level="INFO">${x} = IOS Development</msg>
+<status status="PASS" starttime="20221006 16:25:41.311" endtime="20221006 16:25:41.326"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.326" endtime="20221006 16:25:41.326"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.326" endtime="20221006 16:25:41.326"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.310" endtime="20221006 16:25:41.326"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="3b790689-0281-490e-b02e-77bae178c144")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.344" level="INFO">${x} = Android Development</msg>
+<status status="PASS" starttime="20221006 16:25:41.328" endtime="20221006 16:25:41.344"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.344" endtime="20221006 16:25:41.344"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.344" endtime="20221006 16:25:41.344"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.328" endtime="20221006 16:25:41.344"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="a11c2bba-3ae1-4967-aa37-f21d39296933")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.363" level="INFO">${x} = React Native</msg>
+<status status="PASS" starttime="20221006 16:25:41.344" endtime="20221006 16:25:41.363"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.363" endtime="20221006 16:25:41.363"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.363" endtime="20221006 16:25:41.363"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.344" endtime="20221006 16:25:41.363"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="fac2da24-9d72-46a7-a59f-ca63568ae635")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.377" level="INFO">${x} = Building Hybrid Apps using Ionic Framework</msg>
+<status status="PASS" starttime="20221006 16:25:41.363" endtime="20221006 16:25:41.377"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.377" endtime="20221006 16:25:41.378"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.378" endtime="20221006 16:25:41.378"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.363" endtime="20221006 16:25:41.378"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="f25d7750-d296-4a8d-80dc-238e74b40412")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.391" level="INFO">${x} = Xamarin Programming for Cross-Platform Applications</msg>
+<status status="PASS" starttime="20221006 16:25:41.378" endtime="20221006 16:25:41.391"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.391" endtime="20221006 16:25:41.391"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.391" endtime="20221006 16:25:41.391"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.378" endtime="20221006 16:25:41.391"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="57536bd2-a834-4ba5-840a-626cb71bbce4")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.409" level="INFO">${x} = Journey to the Cloud</msg>
+<status status="PASS" starttime="20221006 16:25:41.391" endtime="20221006 16:25:41.409"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.409" endtime="20221006 16:25:41.409"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.409" endtime="20221006 16:25:41.409"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.391" endtime="20221006 16:25:41.409"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="ca58cdcb-f7de-4f0e-aafc-7b83192e5da1")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.409" level="INFO">${x} = Overview of Cloud Technology</msg>
+<status status="PASS" starttime="20221006 16:25:41.409" endtime="20221006 16:25:41.409"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.409" endtime="20221006 16:25:41.409"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.409" endtime="20221006 16:25:41.409"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.409" endtime="20221006 16:25:41.409"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="6ecd4957-e575-431f-91eb-e9f432154574")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.433" level="INFO">${x} = DevOps Foundations</msg>
+<status status="PASS" starttime="20221006 16:25:41.409" endtime="20221006 16:25:41.434"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.434" endtime="20221006 16:25:41.435"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.435" endtime="20221006 16:25:41.436"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.409" endtime="20221006 16:25:41.436"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="fa13e2ab-9945-4b26-8c04-6f637a3f67d4")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.449" level="INFO">${x} = Hands-On Terraform</msg>
+<status status="PASS" starttime="20221006 16:25:41.437" endtime="20221006 16:25:41.449"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.449" endtime="20221006 16:25:41.450"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.450" endtime="20221006 16:25:41.451"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.436" endtime="20221006 16:25:41.451"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="e3cb6c00-2699-4e6d-b455-d1647b85da84")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.471" level="INFO">${x} = DevOps Academy Bootcamp</msg>
+<status status="PASS" starttime="20221006 16:25:41.452" endtime="20221006 16:25:41.471"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.471" endtime="20221006 16:25:41.473"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.473" endtime="20221006 16:25:41.474"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.451" endtime="20221006 16:25:41.474"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="effeca41-b18c-42bf-b786-9a0518dd281a")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.494" level="INFO">${x} = Cloud-Native Development</msg>
+<status status="PASS" starttime="20221006 16:25:41.475" endtime="20221006 16:25:41.494"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.494" endtime="20221006 16:25:41.494"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.494" endtime="20221006 16:25:41.494"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.474" endtime="20221006 16:25:41.494"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="054b54dc-ef08-4d48-935d-eb70a09b4154")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.509" level="INFO">${x} = Cloud Foundational Engineer Bootcamp</msg>
+<status status="PASS" starttime="20221006 16:25:41.498" endtime="20221006 16:25:41.509"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.509" endtime="20221006 16:25:41.509"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.509" endtime="20221006 16:25:41.509"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.494" endtime="20221006 16:25:41.509"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="e166e08b-fe20-4208-9152-927404042d45")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.519" level="INFO">${x} = Architecting Systems in the Cloud</msg>
+<status status="PASS" starttime="20221006 16:25:41.509" endtime="20221006 16:25:41.519"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.519" endtime="20221006 16:25:41.519"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.519" endtime="20221006 16:25:41.519"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.509" endtime="20221006 16:25:41.519"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="2efa3d6c-f27a-469a-9f01-90f9d019c2fc")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.535" level="INFO">${x} = Hands-On Kubernetes</msg>
+<status status="PASS" starttime="20221006 16:25:41.519" endtime="20221006 16:25:41.535"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.535" endtime="20221006 16:25:41.535"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.535" endtime="20221006 16:25:41.535"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.519" endtime="20221006 16:25:41.535"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="3fcd3252-5239-4241-ba29-29227e0f9ed7")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.562" level="INFO">${x} = SRE Essentials</msg>
+<status status="PASS" starttime="20221006 16:25:41.535" endtime="20221006 16:25:41.562"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.562" endtime="20221006 16:25:41.562"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.562" endtime="20221006 16:25:41.563"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.535" endtime="20221006 16:25:41.563"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="9378876c-0e0c-419b-811c-4daf9762fb6d")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.577" level="INFO">${x} = Hands-On Ansible</msg>
+<status status="PASS" starttime="20221006 16:25:41.563" endtime="20221006 16:25:41.577"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.577" endtime="20221006 16:25:41.577"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.577" endtime="20221006 16:25:41.577"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.563" endtime="20221006 16:25:41.577"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="53bc96ea-e1b7-4a02-8f34-e0d955f80151")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.593" level="INFO">${x} = Docker, Kubernetes &amp; Jenkins</msg>
+<status status="PASS" starttime="20221006 16:25:41.577" endtime="20221006 16:25:41.593"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.594" endtime="20221006 16:25:41.594"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.594" endtime="20221006 16:25:41.594"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.577" endtime="20221006 16:25:41.594"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="1e3d799c-9410-43d6-8efe-abb34a024e95")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.604" level="INFO">${x} = Hands-On Puppet</msg>
+<status status="PASS" starttime="20221006 16:25:41.594" endtime="20221006 16:25:41.604"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.604" endtime="20221006 16:25:41.604"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.604" endtime="20221006 16:25:41.604"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.594" endtime="20221006 16:25:41.604"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="b52dad0c-ff8e-407a-8f8d-892b8f91eb13")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.619" level="INFO">${x} = Hands-On Chef</msg>
+<status status="PASS" starttime="20221006 16:25:41.604" endtime="20221006 16:25:41.619"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.619" endtime="20221006 16:25:41.619"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.619" endtime="20221006 16:25:41.619"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.604" endtime="20221006 16:25:41.619"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="24566a15-9444-4dbb-b6c8-a4acbfe0c8cf")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.635" level="INFO">${x} = Hands-On Jenkins</msg>
+<status status="PASS" starttime="20221006 16:25:41.619" endtime="20221006 16:25:41.635"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.635" endtime="20221006 16:25:41.635"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.635" endtime="20221006 16:25:41.635"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.619" endtime="20221006 16:25:41.635"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="f476c63d-c7c5-4781-87ce-d6f8e86139f4")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.658" level="INFO">${x} = Amazon Web Services Technical Essentials</msg>
+<status status="PASS" starttime="20221006 16:25:41.635" endtime="20221006 16:25:41.658"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.658" endtime="20221006 16:25:41.658"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.659" endtime="20221006 16:25:41.659"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.635" endtime="20221006 16:25:41.659"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="a0a4128e-5e66-4c45-8643-5546a7d3b356")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.674" level="INFO">${x} = AWS Cloud Practitioner Essentials</msg>
+<status status="PASS" starttime="20221006 16:25:41.660" endtime="20221006 16:25:41.674"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.674" endtime="20221006 16:25:41.674"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.674" endtime="20221006 16:25:41.674"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.659" endtime="20221006 16:25:41.674"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="b800ef37-bd41-44e0-9ed5-946221eff22d")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.688" level="INFO">${x} = AWS Cloud Essentials for Business Leaders</msg>
+<status status="PASS" starttime="20221006 16:25:41.675" endtime="20221006 16:25:41.688"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.688" endtime="20221006 16:25:41.688"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.689" endtime="20221006 16:25:41.689"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.675" endtime="20221006 16:25:41.689"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="fadc0c68-a7c1-495a-adda-f0d43e1ceacf")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.690" level="INFO">${x} = Architecting on (AWS)</msg>
+<status status="PASS" starttime="20221006 16:25:41.689" endtime="20221006 16:25:41.690"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.690" endtime="20221006 16:25:41.690"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.690" endtime="20221006 16:25:41.690"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.689" endtime="20221006 16:25:41.690"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="5532b91d-9b4c-410b-a3de-b48da40a92d7")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.706" level="INFO">${x} = Advanced Architecting on AWS</msg>
+<status status="PASS" starttime="20221006 16:25:41.690" endtime="20221006 16:25:41.706"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.706" endtime="20221006 16:25:41.706"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.706" endtime="20221006 16:25:41.706"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.690" endtime="20221006 16:25:41.706"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="8a0e3100-b9f8-4567-894e-eba460673ada")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.724" level="INFO">${x} = AWS Well-Architected Best Practices</msg>
+<status status="PASS" starttime="20221006 16:25:41.706" endtime="20221006 16:25:41.724"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.724" endtime="20221006 16:25:41.724"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.724" endtime="20221006 16:25:41.724"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.706" endtime="20221006 16:25:41.724"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="2b40ef1d-4c89-4c9e-8626-9beac2ff1276")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.740" level="INFO">${x} = Running Containers on Amazon Elastic Kubernetes Service (Amazon EKS)</msg>
+<status status="PASS" starttime="20221006 16:25:41.724" endtime="20221006 16:25:41.740"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.740" endtime="20221006 16:25:41.740"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.740" endtime="20221006 16:25:41.740"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.724" endtime="20221006 16:25:41.740"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="f9ff2f62-818c-4ef1-ae4d-c6d4ae933e0a")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.764" level="INFO">${x} = Big Data on AWS</msg>
+<status status="PASS" starttime="20221006 16:25:41.740" endtime="20221006 16:25:41.764"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.764" endtime="20221006 16:25:41.765"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.765" endtime="20221006 16:25:41.765"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.740" endtime="20221006 16:25:41.765"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="320e8726-5226-4d17-868e-0d6ad9b7e123")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.779" level="INFO">${x} = Building Data Analytics Solutions Using Amazon Redshift</msg>
+<status status="PASS" starttime="20221006 16:25:41.765" endtime="20221006 16:25:41.779"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.779" endtime="20221006 16:25:41.781"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.782" endtime="20221006 16:25:41.782"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.765" endtime="20221006 16:25:41.782"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="93899cfa-d16b-4a0c-aecf-913724289da2")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.800" level="INFO">${x} = Building Data Lakes on AWS</msg>
+<status status="PASS" starttime="20221006 16:25:41.783" endtime="20221006 16:25:41.800"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.800" endtime="20221006 16:25:41.800"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.800" endtime="20221006 16:25:41.800"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.782" endtime="20221006 16:25:41.801"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="31553632-dbd9-4c5e-b2c4-9ccb30e6a055")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.814" level="INFO">${x} = Data Warehousing on AWS</msg>
+<status status="PASS" starttime="20221006 16:25:41.801" endtime="20221006 16:25:41.814"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.815" endtime="20221006 16:25:41.816"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.816" endtime="20221006 16:25:41.816"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.801" endtime="20221006 16:25:41.816"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="ddf76081-68c5-481a-bc7c-4530f478a63a")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.842" level="INFO">${x} = Planning and Designing Databases on AWS</msg>
+<status status="PASS" starttime="20221006 16:25:41.817" endtime="20221006 16:25:41.842"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.842" endtime="20221006 16:25:41.843"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.843" endtime="20221006 16:25:41.843"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.817" endtime="20221006 16:25:41.843"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="21028db2-24de-4de3-9a0f-e8279d92a9d6")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.856" level="INFO">${x} = Video Streaming Essentials for AWS Media Services</msg>
+<status status="PASS" starttime="20221006 16:25:41.844" endtime="20221006 16:25:41.856"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.857" endtime="20221006 16:25:41.858"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.858" endtime="20221006 16:25:41.858"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.844" endtime="20221006 16:25:41.858"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="dbdacfa1-0c33-4a7b-944d-8c9a51c2cd07")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.872" level="INFO">${x} = Migrating to AWS</msg>
+<status status="PASS" starttime="20221006 16:25:41.858" endtime="20221006 16:25:41.872"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.872" endtime="20221006 16:25:41.872"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.872" endtime="20221006 16:25:41.872"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.858" endtime="20221006 16:25:41.872"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="c40ff665-576d-42f1-baca-50c0deab1c92")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.888" level="INFO">${x} = AWS Security</msg>
+<status status="PASS" starttime="20221006 16:25:41.872" endtime="20221006 16:25:41.888"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.888" endtime="20221006 16:25:41.888"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.888" endtime="20221006 16:25:41.888"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.872" endtime="20221006 16:25:41.888"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="d0d1c926-c2fd-4a6a-996c-3e1f4153c0ab")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.904" level="INFO">${x} = Developing for Amazon Web Services (AWS)</msg>
+<status status="PASS" starttime="20221006 16:25:41.888" endtime="20221006 16:25:41.904"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.904" endtime="20221006 16:25:41.904"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.904" endtime="20221006 16:25:41.904"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.888" endtime="20221006 16:25:41.904"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="f60074b5-0103-4e09-86e0-1ba037554ca3")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.904" level="INFO">${x} = Deploying Infrastructure on Amazon Web Services (AWS)</msg>
+<status status="PASS" starttime="20221006 16:25:41.904" endtime="20221006 16:25:41.904"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.904" endtime="20221006 16:25:41.920"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.920" endtime="20221006 16:25:41.920"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.904" endtime="20221006 16:25:41.920"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="b703f0e5-39c3-4378-b1ca-87f0fa7e274a")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.920" level="INFO">${x} = Systems Operations on AWS</msg>
+<status status="PASS" starttime="20221006 16:25:41.920" endtime="20221006 16:25:41.920"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.920" endtime="20221006 16:25:41.920"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.920" endtime="20221006 16:25:41.936"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.920" endtime="20221006 16:25:41.936"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="58217a0d-814d-434e-a5af-15f613fc9758")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:41.976" level="INFO">${x} = Developing Serverless Solutions on AWS</msg>
+<status status="PASS" starttime="20221006 16:25:41.936" endtime="20221006 16:25:41.976"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:41.976" endtime="20221006 16:25:41.977"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:41.977" endtime="20221006 16:25:41.978"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.936" endtime="20221006 16:25:41.978"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="273265ae-1cb4-4384-b573-5260f9dce9c2")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:42.002" level="INFO">${x} = Architecting with Google Compute Engine</msg>
+<status status="PASS" starttime="20221006 16:25:41.978" endtime="20221006 16:25:42.002"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:42.002" endtime="20221006 16:25:42.003"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:42.003" endtime="20221006 16:25:42.003"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:41.978" endtime="20221006 16:25:42.003"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="8a10d54d-7f9a-4ada-acc0-3fdbcd3f5a49")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:42.028" level="INFO">${x} = Architecting with Google Cloud: Design and Process</msg>
+<status status="PASS" starttime="20221006 16:25:42.004" endtime="20221006 16:25:42.028"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:42.028" endtime="20221006 16:25:42.029"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:42.029" endtime="20221006 16:25:42.029"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:42.004" endtime="20221006 16:25:42.029"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="3e494bcd-3278-4230-b3a5-c5f21db36dbf")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:42.064" level="INFO">${x} = Developing Applications with Google Cloud Platform</msg>
+<status status="PASS" starttime="20221006 16:25:42.030" endtime="20221006 16:25:42.064"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:42.065" endtime="20221006 16:25:42.065"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:42.065" endtime="20221006 16:25:42.065"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:42.029" endtime="20221006 16:25:42.065"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="8020f465-060b-47b1-b170-8e0280172bc5")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:42.085" level="INFO">${x} = Architecting with Google Kubernetes Engine</msg>
+<status status="PASS" starttime="20221006 16:25:42.066" endtime="20221006 16:25:42.085"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:42.085" endtime="20221006 16:25:42.088"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:42.088" endtime="20221006 16:25:42.089"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:42.066" endtime="20221006 16:25:42.089"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="d363042d-d696-41d9-9e2d-7febcd383ac6")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:42.104" level="INFO">${x} = Logging, Monitoring, and Observability in Google Cloud</msg>
+<status status="PASS" starttime="20221006 16:25:42.090" endtime="20221006 16:25:42.104"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:42.104" endtime="20221006 16:25:42.104"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:42.104" endtime="20221006 16:25:42.104"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:42.089" endtime="20221006 16:25:42.104"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="6b57e0bf-ea96-4248-bb02-bc16c1587453")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:42.118" level="INFO">${x} = Networking in Google Cloud</msg>
+<status status="PASS" starttime="20221006 16:25:42.105" endtime="20221006 16:25:42.118"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:42.118" endtime="20221006 16:25:42.119"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:42.119" endtime="20221006 16:25:42.119"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:42.105" endtime="20221006 16:25:42.119"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="6d8f2096-a61b-4172-82e3-406898c1b5a8")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:42.129" level="INFO">${x} = Security in Google Cloud</msg>
+<status status="PASS" starttime="20221006 16:25:42.120" endtime="20221006 16:25:42.129"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="PASS" starttime="20221006 16:25:42.129" endtime="20221006 16:25:42.131"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:42.132" endtime="20221006 16:25:42.132"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:42.119" endtime="20221006 16:25:42.132"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8df17e85eae6ef3db481c0f7c7776009", element="5b338fd5-a538-4fe0-9ba6-418d8aff5a33")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${x}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:42.144" level="INFO">${x} = Machine Learning with TensorFlow on Google Cloud Platform</msg>
+<status status="PASS" starttime="20221006 16:25:42.133" endtime="20221006 16:25:42.144"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>"""${x}"""=="""${rct}"""</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<msg timestamp="20221006 16:25:42.144" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20221006 16:25:42.144" endtime="20221006 16:25:42.145"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${x}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20221006 16:25:42.145" endtime="20221006 16:25:42.146"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:42.133" endtime="20221006 16:25:42.146"/>
+</iter>
+<status status="PASS" starttime="20221006 16:25:39.849" endtime="20221006 16:25:42.146"/>
+</for>
+<kw name="close_brwsr" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20221006 16:25:42.147" endtime="20221006 16:25:44.309"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:42.146" endtime="20221006 16:25:44.309"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:33.591" endtime="20221006 16:25:44.309"/>
+</test>
+<status status="PASS" starttime="20221006 16:25:16.262" endtime="20221006 16:25:44.310"/>
+</suite>
+<suite id="s1-s2" name="Test1" source="C:\Users\00005803\Desktop\Robot framework tutorials\test1.robot">
+<test id="s1-s2-t1" name="table scrape" line="173">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://testautomationpractice.blogspot.com/</arg>
+<arg>${browser}</arg>
+<arg>options=add_experimental_option('excludeSwitches', ['enable-logging'])</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221006 16:25:16.516" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
+<status status="PASS" starttime="20221006 16:25:16.516" endtime="20221006 16:25:25.206"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${rows}</var>
+<arg>xpath://table[@name='BookTable']/tbody/tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20221006 16:25:25.207" level="WARN">Keyword 'Get Element Count' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Get Element Count' or 'XML.Get Element Count'.</msg>
+<msg timestamp="20221006 16:25:25.223" level="INFO">${rows} = 7</msg>
+<status status="PASS" starttime="20221006 16:25:25.207" endtime="20221006 16:25:25.223"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${columns}</var>
+<arg>xpath:(//table[@name='BookTable']/tbody/tr)[1]/th</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20221006 16:25:25.223" level="WARN">Keyword 'Get Element Count' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Get Element Count' or 'XML.Get Element Count'.</msg>
+<msg timestamp="20221006 16:25:25.234" level="INFO">${columns} = 4</msg>
+<status status="PASS" starttime="20221006 16:25:25.223" endtime="20221006 16:25:25.234"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${rows}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:25.235" endtime="20221006 16:25:25.236"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${columns}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221006 16:25:25.236" endtime="20221006 16:25:25.238"/>
+</kw>
+<kw name="Table Column Should Contain" library="SeleniumLibrary">
+<arg>xpath://table[@name='BookTable']</arg>
+<arg>1</arg>
+<arg>Learn Java</arg>
+<doc>Verifies table column contains text ``expected``.</doc>
+<status status="PASS" starttime="20221006 16:25:25.238" endtime="20221006 16:25:25.330"/>
+</kw>
+<kw name="Table Row Should Contain" library="SeleniumLibrary">
+<arg>xpath://table[@name='BookTable']</arg>
+<arg>3</arg>
+<arg>500</arg>
+<doc>Verifies that table row contains text ``expected``.</doc>
+<status status="PASS" starttime="20221006 16:25:25.331" endtime="20221006 16:25:25.381"/>
+</kw>
+<kw name="Table Cell Should Contain" library="SeleniumLibrary">
+<arg>xpath://table[@name='BookTable']</arg>
+<arg>2</arg>
+<arg>3</arg>
+<arg>Selenium</arg>
+<doc>Verifies table cell contains text ``expected``.</doc>
+<msg timestamp="20221006 16:25:25.452" level="INFO">Table cell contains 'Selenium'.</msg>
+<status status="PASS" starttime="20221006 16:25:25.381" endtime="20221006 16:25:25.452"/>
+</kw>
+<kw name="Table Header Should Contain" library="SeleniumLibrary">
+<arg>xpath://table[@name='BookTable']</arg>
+<arg>BookName</arg>
+<doc>Verifies table header contains text ``expected``.</doc>
+<status status="PASS" starttime="20221006 16:25:25.452" endtime="20221006 16:25:25.495"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:16.516" endtime="20221006 16:25:25.495"/>
+</test>
+<test id="s1-s2-t2" name="file upload" line="183">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://the-internet.herokuapp.com/upload</arg>
+<arg>${browser}</arg>
+<arg>options=add_experimental_option('excludeSwitches', ['enable-logging'])</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221006 16:25:25.497" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/upload'.</msg>
+<status status="PASS" starttime="20221006 16:25:25.497" endtime="20221006 16:25:31.051"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221006 16:25:34.056" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221006 16:25:31.051" endtime="20221006 16:25:34.056"/>
+</kw>
+<kw name="Retrr" library="axs">
+<var>${sxw}</var>
+<arg>selenium-screenshot-1.png</arg>
+<msg timestamp="20221006 16:25:34.056" level="INFO">${sxw} = C:\Users\00005803\Desktop\Robot framework tutorials/selenium-screenshot-1.png</msg>
+<status status="PASS" starttime="20221006 16:25:34.056" endtime="20221006 16:25:34.056"/>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>file-upload</arg>
+<arg>${sxw}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20221006 16:25:34.056" level="INFO">Sending C:\Users\00005803\Desktop\Robot framework tutorials\selenium-screenshot-1.png to browser.</msg>
+<status status="PASS" starttime="20221006 16:25:34.056" endtime="20221006 16:25:34.107"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221006 16:25:37.115" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221006 16:25:34.107" endtime="20221006 16:25:37.115"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>file-submit</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221006 16:25:37.116" level="INFO">Clicking element 'file-submit'.</msg>
+<status status="PASS" starttime="20221006 16:25:37.115" endtime="20221006 16:25:38.030"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221006 16:25:42.045" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20221006 16:25:38.030" endtime="20221006 16:25:42.045"/>
+</kw>
+<status status="PASS" starttime="20221006 16:25:25.495" endtime="20221006 16:25:42.046"/>
+</test>
+<status status="PASS" starttime="20221006 16:25:16.262" endtime="20221006 16:25:42.046"/>
+</suite>
+<doc>[https://pabot.org/?ref=log|Pabot] result from 2 executions.</doc>
+<status status="PASS" starttime="20221006 16:25:16.239" endtime="20221006 16:25:44.312"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="Test">Suites.Test</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s2" name="Test1">Suites.Test1</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20221006 16:25:25.207" level="WARN">Keyword 'Get Element Count' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Get Element Count' or 'XML.Get Element Count'.</msg>
+<msg timestamp="20221006 16:25:25.223" level="WARN">Keyword 'Get Element Count' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Get Element Count' or 'XML.Get Element Count'.</msg>
+</errors>
+</robot>

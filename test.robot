@@ -5,8 +5,8 @@ Library    axs.py
 Library    XML
 #Suite Setup    opn_brwsr
 #Suite Teardown    close_brwsr
-# Test Setup    opn_brwsr
-# Test Teardown    close_brwsr
+Test Setup    opn_brwsr
+Test Teardown    close_brwsr
 *** Variables ***
 ${url}    https://www.docker.com/
 ${grl}    https://docs.google.com/forms/d/e/1FAIpQLSeI8_vYyaJgM7SJM4Y9AWfLq-tglWZh6yt7bEXEOJr_L-hV1A/viewform?formkey=dGx0b1ZrTnoyZDgtYXItMWVBdVlQQWc6MQ
@@ -154,22 +154,23 @@ ${rct}    Machine Learning with TensorFlow on Google Cloud Platform
 #     Sleep    5s
 #     ${a}=    Get Text    xpath://*[@id="nav-menu-item-16934"]/a/span[1]
 #     Log To Console    ${a}
-asc
-    Go To    https://www.fleekitsolutions.com/
-    Page Should Contain Element    xpath://img[@class='normal']
-    Sleep    5s
-    ${a}=    Get Text    xpath://*[@id="nav-menu-item-16934"]/a/span[1]
-    Log To Console    ${a}
-bsc
-    Go To    https://techedtrainings.com/courses
-    ${a}=    SeleniumLibrary.Get Element Count    xpath://a
-    Log To Console    ${a}
-    ${all_Links}=    Get WebElements    xpath://a
-    FOR    ${i}    IN    @{all_Links}
-        ${x}=    Get Text    ${i}
-        Exit For Loop If    """${x}"""=="""${rct}"""
-        Log To Console    ${x}        
-    END
+# asc
+#     Go To    https://www.fleekitsolutions.com/
+#     Page Should Contain Element    xpath://img[@class='normal']
+#     Sleep    5s
+#     ${a}=    Get Text    xpath://*[@id="nav-menu-item-16934"]/a/span[1]
+#     Log To Console    ${a}
+# bsc
+#     Go To    https://techedtrainings.com/courses
+#     ${a}=    SeleniumLibrary.Get Element Count    xpath://a
+#     Log To Console    ${a}
+#     ${all_Links}=    Get WebElements    xpath://a
+#     FOR    ${i}    IN    @{all_Links}
+#         ${x}=    Get Text    ${i}
+#         Exit For Loop If    """${x}"""=="""${rct}"""
+#         Log To Console    ${x}        
+#     END
+#     #pabot --processes 2 -outputdir *.robot     
 # table scrape
 #     Open Browser    https://testautomationpractice.blogspot.com/    ${browser}    options=add_experimental_option('excludeSwitches', ['enable-logging'])
 #     ${rows}=     Get Element Count    xpath://table[@name='BookTable']/tbody/tr
@@ -204,8 +205,8 @@ bsc
 #     ${xcs}=    Retreat    Giridhar
 #     Log To Console    ${xcs}
 #     Close Window
-# opn_brwsr
-#     Open Browser    about:blank  ${browser}    options=add_experimental_option('excludeSwitches', ['enable-logging'])
-#     Maximize Browser Window
-# close_brwsr
-#     Close All Browsers
+opn_brwsr
+    Open Browser    about:blank  ${browser}    options=add_experimental_option('excludeSwitches', ['enable-logging'])
+    Maximize Browser Window
+close_brwsr
+    Close All Browsers
